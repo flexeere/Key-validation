@@ -15,3 +15,10 @@ db.sqlite3
 # IDE
 .vscode/
 .idea/
+
+# Local Utilities
+deploy.py
+check_logs.py
+fix_db.py
+clear_data.py
+create_admin.py
