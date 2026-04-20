@@ -8,7 +8,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dummy-key-for-development')
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-ALLOWED_HOSTS = ['103.124.208.21', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['key.nssbbdu.in', '103.124.208.21', 'localhost', '127.0.0.1']
+
+# Trust Cloudflare SSL Proxy Headers
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+CSRF_TRUSTED_ORIGINS = ['https://key.nssbbdu.in']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
